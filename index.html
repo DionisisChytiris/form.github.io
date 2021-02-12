@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: gray;
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #name {
+            margin-top: 30px;
+            border-style: none;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('form').onsubmit = function(){
+                const name = document.querySelector('#name').value;
+                alert(`Hello, ${name}!`);
+            };
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Form with Javascript</h1>
+        <h3>By Brian Yu</h3>
+        <p>CS50's Web Programming with Python and Javascript from Harvard</p>
+        <form>
+            <input id='name' type="text" placeholder="Name" autofocus autocomplete="off">
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
